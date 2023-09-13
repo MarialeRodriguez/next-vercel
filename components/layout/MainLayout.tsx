@@ -2,11 +2,15 @@ import { Inter } from 'next/font/google'
 import Head from "next/head";
 import styles from "./MainLayout.module.css";
 import { Navbar } from "../Navbar";
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const MainLayout: FC = ({ children }) => {
+interface MainLayoutProps {
+  children: ReactNode;
+}
+
+export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 
     return (
         <div className={ styles.container }>

@@ -1,6 +1,10 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-export const WhiteLayout: FC = ({ children }) => {
+interface MainLayoutProps {
+  children: ReactNode;
+}
+
+export const WhiteLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <div style={{
       backgroundColor: 'white',
